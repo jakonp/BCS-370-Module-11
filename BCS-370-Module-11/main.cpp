@@ -6,9 +6,23 @@
 //
 
 #include <iostream>
+#include <vector>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+using namespace std;
+
+int findMaxVector(vector<int> v)
+{
+    if(v.size()==1)
+    {
+        return v[0];
+    }
+    vector<int> tmp = v;
+    tmp.erase(tmp.end()-1);
+    return max(v[v.size()-1], findMaxVector(tmp));
+}
+
+int main() {
+   
+    vector<int> myVector = {5, 9, -45, 82, 17, 24 ,-2};
+    cout << findMaxVector(myVector) << endl;
 }
