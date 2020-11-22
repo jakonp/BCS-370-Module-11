@@ -26,3 +26,15 @@ int main() {
     vector<int> myVector = {5, 9, -45, 82, 17, 24 ,-2};
     cout << findMaxVector(myVector) << endl;
 }
+
+/*
+ Algorithm
+ 1. The base case is there so that if the vector has a single element that single element is returned.
+ 2. The function creates an array of the current array without the last element.
+ 3. The funtion finds the max between the last element of the previous call and the last element of the current call.
+ 3. The maximum number is returned.
+ 
+ 
+ Time complexity: O(n)
+ Space complecity: O(n)
+ */
